@@ -22,15 +22,18 @@ public class Main {
         hilos.forEach(Thread::start);
 
         int sumaTotal = 0;
+        long tiempoTotal = 0;
         for (HiloLista hilo : hilos) {
             try {
                 hilo.join();
                 sumaTotal += hilo.getSumaNumerosLista();
+                tiempoTotal += hilo.getTiempoEjecucion();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
 
         System.out.println("Suma total: " + sumaTotal);
+        System.out.println("Tiempo total: " + tiempoTotal + " nanosegundos");
     }
 }
