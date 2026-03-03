@@ -22,13 +22,19 @@ public class HiloLista extends Thread{
         return sumaNumerosLista;
     }
 
+    public ArrayList<Integer> getSublista(){ return sublista;}
+
     @Override
     public void run(){
+        long inicioTiempo = System.nanoTime();
         for (Integer numero : lista) {
             if (numero >= limiteInferior && numero < limiteSuperior && numero % 2 == resultadoModulo) {
                 sublista.add(numero);
                 sumaNumerosLista += numero;
             }
         }
+        long finalTiempo = System.nanoTime();
+        String[] tipoDeLista = {"pares", "impares"};
+        System.out.println("La lista de números " + tipoDeLista[resultadoModulo] + " con números entre " + limiteInferior + " y " + limiteSuperior + ", duró " + (finalTiempo - inicioTiempo) + " nanosegundos.");
     }
 }
