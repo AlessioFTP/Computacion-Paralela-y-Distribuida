@@ -2,7 +2,6 @@ package org.paralela.distribuida.computacion.dataset;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Dataset {
