@@ -28,7 +28,6 @@ public class Dataset {
         File archivo = new File(ruta);
 
         if (archivo.exists() && archivo.isFile()) {
-            System.out.println("Leido");
             leerDataset();
             return;
         }
@@ -52,7 +51,6 @@ public class Dataset {
         }
 
         guardarEnCSV();
-        System.out.println("Guardado");
     }
 
     public void guardarEnCSV() {
