@@ -33,5 +33,8 @@
 .DS_Store
 Thumbs.db
 
+# --- Documentos ---
+PDFs/
+
 # --- Excepciones de Maven Wrapper ---
 !.mvn/wrapper/maven-wrapper.jar
